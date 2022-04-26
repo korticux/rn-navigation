@@ -25,7 +25,7 @@ import MealItem from '../components/MealItem';
             );
         };
 
-        const catId = props.navigation.getParam('categoryId');
+        const catId = props.navigation.getParam('CategoryId');
 
         const displayMeals = MEALS.filter(
             meal => meal.categoryIds.indexOf(catId) >= 0
@@ -45,7 +45,7 @@ import MealItem from '../components/MealItem';
  };
 
  CategoryMealScreen.navigationOptions = navigationData => {
-    const catId = navigationData.navigation.getParam('categoryId');
+    const catId = navigationData.navigation.getParam('CategoryId');
 
      const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
 
