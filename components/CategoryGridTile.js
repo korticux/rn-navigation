@@ -10,11 +10,9 @@ const CategoryGridTile = props => {
     return (
         <View style={styles.gridItem}>
              <TouchableCmp style={{flex: 1}} onPress={props.onSelect}>
-                <View 
-                    style={{ ...styles.container, 
+                <View style={{ ...styles.container, 
                      ...{backgroundColor: props.color}}}>
-                <Text style={styles.title} numberOfLines={2}>
-                    {props.title}</Text>
+                <Text style={styles.title} numberOfLines={2}>{props.title}</Text>
             </View>
         </TouchableCmp>
         </View>
@@ -27,7 +25,8 @@ const CategoryGridTile = props => {
             margin: 15,
             height: 150,
             borderRadius: 10,
-            overflow: 'hidden'
+            overflow: 'hidden',
+            elevation: 5
         },
         container: {
             flex: 1,
